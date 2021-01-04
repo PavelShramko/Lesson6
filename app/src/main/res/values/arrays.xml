@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="text1">
+        <item>Сделано</item>
+        <item>Смайл</item>
+        <item>СПА</item>
+    </string-array>
+    <string-array name="text2">
+        <item>Сделано описание</item>
+        <item>Смайл описание</item>
+        <item>СПА описание</item>
+    </string-array>
+    <array name="image_array">
+        <item>@drawable/ic_baseline_done_24</item>
+        <item>@drawable/ic_baseline_mood_24</item>
+        <item>@drawable/ic_baseline_spa_24</item>
+    </array>
+
+</resources>

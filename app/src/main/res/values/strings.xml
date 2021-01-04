@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UiListsHomeWork</string>
+    <string name="heading">Заголовок</string>
+    <string name="description">Описание</string>
+</resources>
