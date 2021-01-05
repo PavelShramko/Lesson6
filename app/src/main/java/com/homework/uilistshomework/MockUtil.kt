@@ -2,7 +2,6 @@ package com.homework.uilistshomework
 
 import android.content.Context
 import androidx.core.content.ContextCompat
-import com.google.android.material.tabs.TabLayout
 import kotlin.random.Random
 
 object MockUtil {
@@ -33,7 +32,7 @@ object MockUtil {
             getColorList(context, 10)
 
 
-    fun getCardItems(context: Context, size: Int): ArrayList<Item.Card> {
+    fun getCardItems(size: Int): ArrayList<Item.Card> {
         val list = ArrayList<Item.Card>()
 
         for (i in 0 until size) {
@@ -42,8 +41,9 @@ object MockUtil {
                 1 -> R.drawable.ic_baseline_done_24
                 else -> R.drawable.ic_baseline_spa_24
             }
-            val text1 = "Заголовок $i"
-            val text2 = "Описание $i"
+            val number = i+1
+            val text1 = "Заголовок $number"
+            val text2 = "Описание $number"
             val item = Item.Card(image, text1, text2)
             list += item
         }

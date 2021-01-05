@@ -2,4 +2,6 @@
     <string name="app_name">UiListsHomeWork</string>
     <string name="heading">Заголовок</string>
     <string name="description">Описание</string>
+    <string name="screen_1">Экран 1</string>
+    <string name="screen_2">Экран 2</string>
 </resources>

@@ -17,7 +17,8 @@
             android:id="@+id/imageCV"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/ic_baseline_done_24" />
+            android:src="@drawable/ic_baseline_done_24"
+            />
 
         <TextView
             android:id="@+id/text_heading"
@@ -43,6 +44,15 @@
             android:text="@string/description"
             android:textColor="@color/black"
             android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_close_24"
+            android:layout_toRightOf="@id/text_heading"
+            android:layout_marginStart="10dp"
+            />
 
 
     </RelativeLayout>

@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.recyclerView.adapter = adapter1
-        adapter1.items = MockUtil.getHeaderColorList(this)
+        adapter1.items = MockUtil.getHeaderColorList(this@MainActivity)
 
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
@@ -24,20 +24,25 @@ class MainActivity : AppCompatActivity() {
                     binding.recyclerView.adapter = adapter1
                     adapter1.items = MockUtil.getHeaderColorList(this@MainActivity)
                 } else {
-                        binding.recyclerView.adapter = adapter2
-                        adapter2.items = MockUtil.getCardItems(this@MainActivity, 15)
+                    binding.recyclerView.adapter = adapter2
+                    adapter2.items = MockUtil.getCardItems(15)
                     }
 
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-
+                //TODO("Not yet implemented")
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
-
+                //TODO("Not yet implemented")
             }
 
+
         })
+    }
+
+    fun deletedCard(position: Int) {
+        MockUtil.getCardItems(15).removeAt(position)
     }
 }

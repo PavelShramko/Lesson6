@@ -9,7 +9,7 @@ import com.homework.uilistshomework.databinding.ItemCardviewBinding
 import com.homework.uilistshomework.databinding.ItemColorBinding
 import com.homework.uilistshomework.databinding.ItemHeaderBinding
 
-class Adapter : RecyclerView.Adapter<Adapter.BaseViewHolder>() {
+class Adapter() : RecyclerView.Adapter<Adapter.BaseViewHolder>() {
 
     var items: List<Item> = emptyList()
         set(value) {
@@ -73,11 +73,16 @@ class Adapter : RecyclerView.Adapter<Adapter.BaseViewHolder>() {
         constructor(parent: ViewGroup) : this(
                 ItemCardviewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         )
-
         fun bind(item: Item.Card) {
             binding.imageCV.setImageResource(item.imageResource)
             binding.textHeading.text = item.text1
             binding.textDescription.text = item.text2
+
+            binding.close.setOnClickListener {
+                val position: Int = this.adapterPosition
+                MainActivity().deletedCard(position)
+                Adapter().notifyItemRemoved(position)
+            }
         }
     }
 
