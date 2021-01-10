@@ -78,6 +78,8 @@ class Adapter() : RecyclerView.Adapter<Adapter.BaseViewHolder>() {
             binding.textHeading.text = item.text1
             binding.textDescription.text = item.text2
 
+
+// Не работает, не могу разобраться
             binding.close.setOnClickListener {
                 val position: Int = this.adapterPosition
                 MainActivity().deletedCard(position)

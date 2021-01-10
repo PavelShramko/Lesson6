@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
         })
     }
-
+// Не работает, не могу разобраться
     fun deletedCard(position: Int) {
         MockUtil.getCardItems(15).removeAt(position)
     }
